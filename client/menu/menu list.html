@@ -1,0 +1,40 @@
+<template name="chooseMenu">
+	{{errorMessageAccess}}
+	{{#if checkAccess}}
+	<div class="addNew">{{>addMenuItem}}</div>
+	<div class="menu">
+		{{#if pizzaInsist}}
+		<div class="pizza">
+			<h4>Pizza</h4>
+			<ul>
+				{{#each pizza}}
+				<li><sup><em>{{coupon}}</em></sup> <span class="item">{{name}}: ${{price}}</span> <a class="edit" href="{{pathFor 'editItem'}}">Edit</a> <a href="#" class="remove">Delete</a></li>
+				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+		{{#if saladInsist}}
+		<div class="salads">			
+			<h4>Salads</h4>
+			<ul>
+				{{#each salads}}
+				<li><span class="item">{{name}}: ${{price}}</span> <a class="edit" href="{{pathFor 'editItem'}}">Edit</a> <a class="remove" href="#">Delete</a></li>
+				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+		{{#if drinksInsist}}
+		<div class="drinks">
+			<h4>Drinks</h4>
+			<ul>
+				{{#each drinks}}
+				<li><span class="item">{{name}}: ${{price}}</span> <a class="edit" href="{{pathFor 'editItem'}}">Edit</a> <a class="remove" href="">Delete</a></li>
+				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+	</div>
+	<button id="confirm" class="btn btn-primary">Confirm</button>
+	<input type="button" id="cancel" class="btn btn-default btn-sm" value="Go back">
+	{{/if}}
+</template>

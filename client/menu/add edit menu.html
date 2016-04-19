@@ -1,0 +1,32 @@
+<template name="addMenuItem">
+	<form class="form-inline">
+		<label>Dish: </label><input class="form-control" type="text" name="name">
+		<label>Price: </label><input class="form-control" type="text" name="price">
+		<label>Category: </label>
+		<select name="category" class="form-control" id="category">
+			<option value="pizza">Pizza</option>
+			<option value="salads">Salads</option>
+			<option value="drinks">Drinks</option>
+		</select>
+		{{#if creatorCoup}}
+		<label>Free coupons:</label>{{/if}}
+		<input type="{{NumberHidden}}" class="form-control" name="count" value="" min="0" max="10">		
+		<input type="submit" id="submit" class="btn btn-default" value="Add">
+	</form>
+</template>
+
+<template name="editItem">
+	<form>
+		<div class="form-group">
+			<label>Dish:</label><br>
+			<input type="text" name="name" id="name" class="form-control" value="{{name}}"></div>
+		<div class="form-group">
+			<label>Price:</label><br>
+			<input type="text" name="price" id="price" class="form-control" value="{{price}}"></div>
+		{{#if creatorCoup}}
+			<label>Free coupons:</label>{{/if}}
+			<input type="{{NumberHidden}}" class="form-control" name="count" id="coupCount" value="{{coupCount}}" min="0" max="10"><br>
+		<input type="submit" class="btn btn-primary" value="Save changes">
+		<input type="button" id="cancel" class="btn btn-default" value="Cancel">
+	</form>
+</template>

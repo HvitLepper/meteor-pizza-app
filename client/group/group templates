@@ -1,0 +1,28 @@
+<template name="createGroup">
+	<form id="newGroup">
+		<div class="form-group">
+			<label>Name</label><br>
+			<input type="text" name="name" class="form-control" id="groupName"></div>
+		<div class="form-group">
+			<input type='file' name='logo' class='myFileInput'></div>	
+		<input type="submit" class="btn btn-primary" value="Confirm">
+		<input type="button" id="cancel" class="btn btn-default" value="Cancel">
+
+	</form>
+</template>
+
+<template name="editGroup">
+	<form id="add-users" class="form-inline">
+	<div class="form-group">
+		<label>Add person</label><br>
+		<select class="form-control" name="addWho">
+			{{#each users}}
+				<option value="{{username}}">{{username}}</option>
+			{{/each}}
+			</select><input type="submit" class="btn btn-link" value="Add user"></div>
+			{{#each usersInGroup}}
+				<p>{{username}} <button class="btn btn-link remove">Remove</button></p>
+			{{/each}}		
+		<input type="button" id="cancel" class="btn btn-default" value="Go back">
+	</form>
+</template>

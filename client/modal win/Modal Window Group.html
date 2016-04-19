@@ -1,0 +1,21 @@
+<template name="selectGroup">
+	<div class="modal fade modalWindowGroup">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+			{{#each group}}
+			<div class="radio">
+				<label>
+					<input type="radio" id="{{this}}" value="{{this}}" name="groupItem">{{this}}
+				</label>
+			</div>
+			{{/each}}
+			</div>		
+			<div class="modalfooter">
+				<button class="btn btn-primary selectGroup">Select Group</button>
+				<button class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+		</div>
+	</div>
+</template>

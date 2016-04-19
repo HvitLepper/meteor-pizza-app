@@ -1,0 +1,14 @@
+<head>
+  <title>Pizza Day</title>
+</head>
+
+
+<template name="layout">
+	<div class="container">		
+				{{>header}}			
+		<div class="row-fluid">
+			{{>errors}}
+  			{{>yield}}
+		</div>		
+	</div>	
+</template>

@@ -1,0 +1,105 @@
+ul {
+	list-style: none;
+	padding: 0;
+}
+.menu {
+	margin-bottom: 40px;
+}
+.menu div {
+	display: inline-block;
+	margin-left: 30px;
+	vertical-align: top;
+	width: 30%;
+}
+.edit {
+	margin-left: 15px;
+}
+.selected {
+	background: yellow;
+}
+a {
+	text-decoration: none;
+}
+a.edit, a.remove {	
+	color: grey;
+}
+
+.header div {
+	display: inline-block;
+}
+
+.header .button {
+	float: right;
+	margin-right: 10px;
+	height: 20px;
+}
+
+#login {
+	margin: 10px 0 0 30px;
+	font-size: 18px;
+}
+
+.modalWindowGroup {
+	width: 100%;
+	height: 100%;
+	right: 0;
+	margin: 0 auto;
+}
+
+.errors{
+  position: fixed;
+  z-index: 10000;
+  padding: 10px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+}
+
+.alert {
+          animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+     -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  width: 250px;
+  float: right;
+  clear: both;
+  margin-bottom: 5px;
+  pointer-events: auto;
+}
+
+#add-users {
+	width: 300px;
+}
+
+#add-users p {
+	margin: 0;
+	padding: 0;
+}
+
+#add-users .form-group {
+	margin: 0;
+}
+
+.remove {
+	color: grey;
+}
+.remove:hover {
+	color: red;
+}
+
+sup {
+	color: red;
+}
+.form-control{
+	width: 30%;
+}
+
+#coupCount {
+	margin-bottom: 15px;
+	width: 60px;
+}
+
+.form-inline {
+	margin-bottom: 20px;
+}

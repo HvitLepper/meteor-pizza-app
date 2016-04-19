@@ -1,0 +1,24 @@
+<template name="welcome">
+	<div class="welcome">
+		<h1>Welcome to the Pizza Day!</h1>
+		<p>Please, sing in to take part in Pizza Day</p>
+	</div>
+</template>
+
+<template name="header">
+	<div class="header">
+		<header class="navbar navbar-default" role="navigation">
+
+		<div id="login">{{> loginButtons}}</div>
+
+		{{#if currentUser}}
+			<div class="button"><button class="btn btn-link btn-lg" id="new-group">Create new group</button></div>
+			{{#if creator}}
+				<div class="button"><button class="btn btn-link btn-lg" id="add-user">Edit group</button></div>
+				<div class="button"><button class="btn btn-link btn-lg" id="new-event">Event</button></div>
+			{{/if}}
+		{{/if}}
+			
+		</header>
+	</div>
+</template>
