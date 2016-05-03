@@ -1,0 +1,18 @@
+<template name="showEvents">
+	<div class="eventList">
+		<h4>Current events:</h4>		
+		{{#each events}}
+			{{#if isInGroup}}
+			<div class="event-data">
+				<h3><img src="{{imgUrl}}" style="height: 40px;">
+					<p class="text-justify">Event from: {{group}} <small>{{date}}</small></p></h3>
+				<p class="state"><a href="#">State: {{state}}</a></p>
+				{{#if notVoted}}
+					<input type="button" class="attend btn btn-success" value="Participate">
+					<input type="button" class="cancel btn btn-danger" value="I'm not hungry">
+				{{/if}}
+			</div>
+			{{/if}}
+		{{/each}}
+	</div>
+</template>

@@ -1,0 +1,19 @@
+<template name="addMenuItem">
+	<form class="form-inline">
+		<label>Dish: </label>
+		<input class="form-control" type="text" name="name">
+		<label>Price: </label>
+		<input class="form-control" type="text" name="price">
+		<label>Category: </label>
+		<select name="category" class="form-control" id="category">
+			<option value="pizza">Pizza</option>
+			<option value="salads">Salads</option>
+			<option value="drinks">Drinks</option>
+		</select>
+		{{#if creator}}
+			<label>Free coupons:</label>
+		{{/if}}
+		<input type="{{NumberHidden}}" class="form-control" name="couponCount" value="" min="0" max="10">		
+		<input type="submit" id="submit" class="btn btn-default" value="Add">
+	</form>
+</template>

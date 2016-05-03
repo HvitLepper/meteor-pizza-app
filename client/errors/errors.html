@@ -10,11 +10,11 @@
 
 <template name="errors">
   <div class="errors row-fluid">
-    {{#each errors}}
+    {{#if error}}
       <div class="alert alert-error bg-danger">
-   	 	<button type="button" class="close" data-dismiss="alert">&times;</button>
-   		 <p class="text-danger">{{message}}</p>
- 	 </div>
-    {{/each}}
+   	 	  <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p class="text-danger">{{error}}</p>
+ 	    </div>
+    {{/if}}
   </div>
 </template>

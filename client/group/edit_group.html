@@ -1,0 +1,17 @@
+<template name="editGroup">
+	<form id="add-users" class="form-inline">
+		<div class="form-group">
+			<label>Add person</label><br>
+			<select class="form-control" name="addWho">
+			{{#each users}}
+				<option value="{{username}}">{{username}}</option>
+			{{/each}}
+			</select>
+			<input type="submit" class="btn btn-link" value="Add user">
+		</div>
+	</form>
+	{{#each usersInGroup}}
+		<p>{{username}} <button class="btn btn-link remove">Remove</button></p>
+	{{/each}}		
+	<input type="button" id="cancel" class="btn btn-default" value="Go back">	
+</template>

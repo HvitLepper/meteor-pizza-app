@@ -1,9 +1,9 @@
 <template name="chooseMenu">
-	{{errorMessageAccess}}
+	{{errorAccessMessage}}
 	{{#if checkAccess}}
-	<div class="addNew">{{>addMenuItem}}</div>
+	<div class="addNew">{{> addMenuItem}}</div>
 	<div class="menu">
-		{{#if pizzaInsist}}
+		{{#if pizzaPresent}}
 		<div class="pizza">
 			<h4>Pizza</h4>
 			<ul>
@@ -13,7 +13,7 @@
 			</ul>
 		</div>
 		{{/if}}
-		{{#if saladInsist}}
+		{{#if saladsPresent}}
 		<div class="salads">			
 			<h4>Salads</h4>
 			<ul>
@@ -23,7 +23,7 @@
 			</ul>
 		</div>
 		{{/if}}
-		{{#if drinksInsist}}
+		{{#if drinksPresent}}
 		<div class="drinks">
 			<h4>Drinks</h4>
 			<ul>
@@ -35,6 +35,6 @@
 		{{/if}}
 	</div>
 	<button id="confirm" class="btn btn-primary">Confirm</button>
-	<input type="button" id="cancel" class="btn btn-default btn-sm" value="Go back">
+	<button class="btn btn-default btn-sm cancel">Go back</button>
 	{{/if}}
 </template>

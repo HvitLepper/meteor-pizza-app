@@ -1,0 +1,16 @@
+<template name="editItem">
+	<form>
+		<div class="form-group">
+			<label>Dish:</label><br>
+			<input type="text" name="name" id="name" class="form-control" value="{{name}}"></div>
+		<div class="form-group">
+			<label>Price:</label><br>
+			<input type="text" name="price" id="price" class="form-control" value="{{price}}"></div>
+			{{#if creator}}
+				<label>Free coupons:</label>
+			{{/if}}
+			<input type="{{NumberHidden}}" class="form-control" name="couponCount" id="coupCount" value="{{couponCount}}" min="0" max="10"><br>
+		<input type="submit" class="btn btn-primary" value="Save changes">
+		<input type="button" id="cancel" class="btn btn-default" value="Cancel">
+	</form>
+</template>
